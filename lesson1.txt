@@ -1,0 +1,49 @@
+How to Use Git and GitHub - Lesson 1
+-------------------------------------
+
+Q: How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+- It is easier to spot typos
+- It is easier to find the location of the typos and to correct them.
+
+Q: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+- It is possible to see how we evolved as a programme, for example, by looking how a function implementation became more efficient over time.
+
+Q: What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+
+- Pros of having manual commits: we can clearly have two different but functional versions.
+- Cons of having manual commits: we can sometimes forget to save a version at a given time. It can be also a little bit subjective since a logical change for a person is not a logical change to other.
+- Pros of auto commits: We can always have a recent version of the file in case something goes wrong.
+- Cons of auto commits: Many of the versions may not be very meaningful (non-functional, too close to a previous version or even too far from a pervious version)
+
+Q: Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+- As said before, sometimes the "logic changes" happens in two separate files. Suppose we are changing a function. Instead of one input argument, the function would have two input arguments. We need to change all other files that call the aforementioned function. Hence, it makes a lot of sense to save multiple files in a single commit.
+
+Q: How can you use the commands git log and git diff to view the history of files?
+
+- One can use "git log" to find a specific commit. Then "git diff" tells you the difference between the file in a given commit to another version of the file in a ealier/later commit.
+
+Q: How might using version control make you more confident to make changes that could break something?
+
+- We can always revert to a correct state of our application by checking out to a previous commit.
+
+Q: Now that you have your workspace set up, what do you want to try using Git for?
+
+- I want to build a data science portfolio. I believe that by having a version control system, it will be easier for me to manage it and also it would be useful to track my evolution along the way.
+
+
+Summary:
+--------
+
+Commits: User created checkpoints at each save. A good rule of thumb is to make one commit per logical change.
+Each one represents a version of the content at one point in time. Each commit is described by a message provided by the user.
+
+git log: presents every commit made, starting with the more recent. Each commit has an ID, an author, a date, and a message associated to it.
+
+git log --stat: show the stats of all files modified in a given commit.
+
+git diff: show the difference between two versions. The usage is the following git diff id1 id2 (support colorized diff, black lines did not change, red lines exist only in the 1st version, green lines were added in the 2nd version)
+
+git checkout: resets all the repository files to their state at the time when a given commit was made. The usage is the following git checkout ID_commit. Note that Git checkout is different from SVN checkout.
