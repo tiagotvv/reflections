@@ -1,0 +1,60 @@
+How to Use Git and GitHub - Lesson 2
+-------------------------------------
+
+Q: What happens when you initialize a repository? Why do you need to do it?
+
+- When a repository is initalized, a hidden .git folder is created. The meta information about the repository will be stored there. Even if the directory from which the repository is created has files, all of them will be listed as untracked. No commit will have been made. 
+
+Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+- The staging area allows the user to select which files he wants to commit thus giving more control to the user. 
+
+Q: How can you use the staging area to make sure you have one commit per logical change?
+
+- Adding the files and using git status to double check the files to see if all of them 'make sense' as a unique logical change for commit.
+
+Q: What are some situations when branches would be helpful in keeping your history organized? How would branches help? 
+
+- Sometimes you want to experiment new things in your code. For example, trying to change the way an algorithm is implemented. By doing this with branches it is easier to keep track of all the changes. Remember that you always have a "working" master branch version to show if needed.
+
+Q: How do the diagrams help you visualize the branch structure?
+
+- By seeing which commits are reachable/unreachable and also to see in which point the branch itself was created.
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+You get only one branch, but all the commits from the merged branches remain reachable. 
+
+Q: What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Automatic merging pros: fast and smooth when there are no conflicts.
+Automatic merging cons: things can get messy if there are conflicts.
+Manual merging: conflicts are spotted and can be corrected.
+Manual merging: can be time consuming.
+
+Summary:
+--------
+
+git init: initialize a Git repository
+
+git status: gives the status of the current repository. 
+
+directory ---> staging area ----> repository
+
+git add: add files to the staging area. These files will be commited later to the repository.
+
+git diff without any arguments compares the files in the working directory to their versions in the staging area.
+
+git reset --hard: discard all the changes in working directory and staging area (IRREVERSIBLE, use with caution)
+
+git branch: show the current branches.
+
+git branch xyz: create a branch named xyz.
+
+git checkout xyz: makes branchname the brach which will be changed.
+
+git merge: Merging two branches into one. Basically what git does is create a unified version of the files based on 3 commits: the tips of the two branches to be merged and the breaking point which created the two branches before.
+
+- git log --graph --oneline branch1 branch2: graphical representation of the commits. Showing the branches. 
+  
+
